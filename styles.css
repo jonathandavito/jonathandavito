@@ -1,0 +1,62 @@
+html, body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #FFFBF4;
+	background-color: #10150C;
+	line-height: 1.618;
+	font-size: 24px;
+}
+@media (max-width: 700px)  {
+	html, body {
+		font-size: 18px;
+	}
+}
+a {
+	color: #FFFBF4;
+}
+h3 {
+	display: inline-block;
+	margin: 1rem 0 0.5rem 0;
+	border-bottom: 5px solid #FFC400; 
+}
+header, section, footer {
+	padding: 1.618rem 0;
+	max-width: 1120px;
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+.intro {
+	margin-top: 10em;
+	border-bottom: 5px solid #FFC400;
+}
+.intro.projects h1 {
+	font-size: 18px;
+}
+.intro.projects h2 {
+	font-size: 60px;	
+}
+@media (max-width: 700px)  {
+	.intro {
+		margin-top: 5em; 
+	}
+}
+section:last-child, footer {
+	border-bottom: 0px;
+}
+footer {
+	display: flex;
+	justify-content: space-between;
+}
+i.fab {
+	font-size: 1.25rem;
+}
+.sm-text {
+	font-size: 16px;
+	letter-spacing: 0.5px;
+}
+.color {
+	color: #FFC400;
+}
+.text-right {
+	text-align: right;
+}
