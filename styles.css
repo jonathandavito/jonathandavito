@@ -8,32 +8,39 @@ html, body {
 @media (max-width: 700px)  {
 	html, body {
 		font-size: 18px;
+		line-height: 1.5;
 	}
 }
 a {
 	color: #FFFBF4;
+}
+h2 {
+	
 }
 h3 {
 	display: inline-block;
 	margin: 1rem 0 0.5rem 0;
 	border-bottom: 5px solid #FFC400; 
 }
-header, section, footer {
+header, nav, section, footer {
 	padding: 1.618rem 0;
-	max-width: 1120px;
+	max-width: 1080px;
 	width: 100%;
 	margin: 0 auto;
 	display: block;
+}
+nav {
+	max-width: 1300px;
 }
 .intro {
 	margin-top: 10em;
 	border-bottom: 5px solid #FFC400;
 }
 .intro.projects h1 {
-	font-size: 18px;
+	font-size: 20px;
 }
 .intro.projects h2 {
-	font-size: 60px;	
+	font-size: 70px;	
 }
 @media (max-width: 700px)  {
 	.intro {
