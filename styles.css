@@ -38,6 +38,8 @@ a {
 	color: #FFFBF4;
 	text-decoration: none;
 	border-bottom: 1px solid #FFFBF4;
+	animation: rainbowBorder 6s ease-out infinite alternate;
+	transition: all 1s ease-out;
 }
 h1, h2, h3 {
 	font-weight: 600;
@@ -117,6 +119,7 @@ footer {
 
 svg {
 	fill: #FFFBF4;
+	transition: all 0.25s ease-in;
 }
 svg .e, svg .d {
 	stroke: #FFFBF4;
@@ -136,7 +139,6 @@ svg .d, .e {
 svg .e {
 	stroke-width: 2px;
 }
-
 i.fab {
 	font-size: 1.25rem;
 }
@@ -147,21 +149,72 @@ i.fab {
 .lg-text {
 	font-size: 30px;
 }
-.rainbow {
+/* .rainbow {
 	background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
 	animation: rainbow_animation 10s ease-out infinite alternate;
 	background-size: 400% 100%;
+} */
+.rainbow {
+  color: #FF0000;
+  animation: rainbow 6s ease-out infinite alternate;
+  width: 200px;
+  height: 100px;
 }
-
-@keyframes rainbow_animation {
-	0%, 100% {
-		background-position: 0 0;
-	}
-
-	50% {
-		background-position: 100% 0;
-	}
+.rainbow.border {
+	animation: rainbowBorder 6s ease-out infinite alternate;
+}
+@keyframes rainbow {
+  12.5% {
+	color: #FF0000;
+  }
+  25% {
+	color: #FFA500;
+  }
+  37.5% {
+	color: #FFFF00;
+  }
+  50% {
+	color: #7FFF00;
+  }
+  62.5% {
+	color: #00FFFF;
+  }
+  75% {
+	color: #0000FF;
+  }
+  87.5% {
+	color: #9932CC;
+  }
+  100% {
+	color: #FF1493;
+  }
+}
+@keyframes rainbowBorder {
+  12.5% {
+	border-color: #FF0000;
+  }
+  25% {
+	border-color: #FFA500;
+  }
+  37.5% {
+	border-color: #FFFF00;
+  }
+  50% {
+	border-color: #7FFF00;
+  }
+  62.5% {
+	border-color: #00FFFF;
+  }
+  75% {
+	border-color: #0000FF;
+  }
+  87.5% {
+	border-color: #9932CC;
+  }
+  100% {
+	border-color: #FF1493;
+  }
 }
