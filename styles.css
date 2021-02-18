@@ -37,9 +37,23 @@ main.home a {
 a {
 	color: #FFFBF4;
 	text-decoration: none;
-	border-bottom: 1px solid #FFFBF4;
-	animation: rainbowBorder 6s ease-out infinite alternate;
+	/* border-bottom: 1px solid #FFFBF4; */
 	transition: all 1s ease-out;
+	display: inline-block;
+	position: relative;
+}
+a:after {
+	content: '';
+	height: 1px;
+	width: 100%;
+	display: block;
+	background-color: #FFFBF4;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-image: repeating-linear-gradient(to left, #FF1493, #9932CC, #0000FF, #00FFFF, #7FFF00, #FFFF00, #FFA500, #FF0000);
+    background-size: 400% 100%;
+    animation: rainbow 6s ease-out infinite alternate;
 }
 h1, h2, h3 {
 	font-weight: 600;
@@ -157,16 +171,24 @@ i.fab {
 	animation: rainbow_animation 10s ease-out infinite alternate;
 	background-size: 400% 100%;
 } */
-.rainbow {
+/* .rainbow {
   color: #FF0000;
   animation: rainbow 6s ease-out infinite alternate;
   width: 200px;
   height: 100px;
-}
+} */
 .rainbow.border {
 	animation: rainbowBorder 6s ease-out infinite alternate;
 }
-@keyframes rainbow {
+.rainbow {
+  background-image: repeating-linear-gradient(to left, #FF1493, #9932CC, #0000FF, #00FFFF, #7FFF00, #FFFF00, #FFA500, #FF0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 100%;
+  animation: rainbow 6s ease-out infinite alternate;
+  display: inline-block;
+}
+/* @keyframes rainbow {
   12.5% {
 	color: #FF0000;
   }
@@ -191,7 +213,7 @@ i.fab {
   100% {
 	color: #FF1493;
   }
-}
+} */
 @keyframes rainbowBorder {
   12.5% {
 	border-color: #FF0000;
@@ -217,4 +239,8 @@ i.fab {
   100% {
 	border-color: #FF1493;
   }
+}
+@keyframes rainbow {
+	0%{background-position: 0 0;}
+	100%{background-position: 100% 0;}
 }
