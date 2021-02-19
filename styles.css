@@ -27,13 +27,14 @@ main.home {
 main.home section {
 	width: auto;
 	margin-left: 0;
+	margin-right: 1em;
 }
 main.home h2 {
 	display: block;
 	width: 100%;
 }
 main.home a {
-	font-size: 40px;
+	font-size: 35px;
 }
 @media (max-width: 700px) {
 	main.home a {
@@ -67,7 +68,7 @@ h1 .sm-text {
 	margin-top: 2em;
 }
 h2 {
-	font-size: 62px;
+	font-size: 60px;
 }
 h3 {
 	font-size: 30px;
@@ -87,7 +88,7 @@ h4 {
 		font-size: 30px;
 	}
 	h3 {
-		font-size: 24px;
+		font-size: 25px;
 	}
 }
 ul {
