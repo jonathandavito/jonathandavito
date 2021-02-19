@@ -277,3 +277,34 @@ i.fab {
 		display: block;
 	}
 }
+
+.slide-right {
+	opacity: 0;
+	transition: transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	transform: translate3d(100px, 0px, 0px);
+}
+.slide-right.in-view {
+	opacity: 1;
+	transition: transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	transform: translate3d(0px, 0px, 0px);
+}
+.slide-left {
+	opacity: 0;
+	transition: transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	transform: translate3d(-100px, 0px, 0px);
+}
+.slide-left.in-view{
+	opacity: 1;
+	transition: transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	transform: translate3d(0px, 0px, 0px);
+}
+.slide-up {
+	opacity: 0;
+	transition: transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	transform: translate3d(0px, -100px, 0px);
+}
+.slide-up.in-view {
+	opacity: 1;
+	transition: transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	transform: translate3d(0px, 0px, 0px);
+}
