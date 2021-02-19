@@ -4,6 +4,7 @@ html, body {
 	background-color:  #0C1009;
 	line-height: 1.618;
 	font-size: 24px;
+	overflow-x: hidden;
 }
 @media (max-width: 700px)  {
 	html, body {
@@ -13,7 +14,7 @@ html, body {
 
 header, nav, main.home, section, footer {
 	padding: 1.618rem 0;
-	max-width: 1080px;
+	max-width: 980px;
 	width: 100%;
 	margin: 0 auto;
 	display: block;
@@ -34,32 +35,32 @@ main.home h2 {
 main.home a {
 	font-size: 40px;
 }
+@media (max-width: 700px) {
+	main.home a {
+		font-size: 30px;
+	}
+}
 a {
 	color: #FFFBF4;
 	text-decoration: none;
-	/* border-bottom: 1px solid #FFFBF4; */
-	transition: all 1s ease-out;
-	display: inline-block;
+	display: inline;
 	position: relative;
+	background-position: left;
+	background-image: linear-gradient(180deg,transparent 98%, #FFFBF4 0);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	transition: background-size .6s ease;
 }
-a:after {
-	content: '';
-	height: 1px;
-	width: 100%;
-	display: block;
-	background-color: #FFFBF4;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	background-image: repeating-linear-gradient(to left, #FF1493, #9932CC, #0000FF, #00FFFF, #7FFF00, #FFFF00, #FFA500, #FF0000);
-    background-size: 400% 100%;
-    animation: rainbow 6s ease-out infinite alternate;
+a:hover{
+	background-size: 0% 100%;
+	background-position: right;
 }
+
 h1, h2, h3 {
 	font-weight: 600;
 }
 h1 {
-	font-size: 85px;
+	font-size: 10vw;
 	line-height: 1;
 }
 h1 .sm-text {
@@ -71,16 +72,17 @@ h2 {
 h3 {
 	font-size: 30px;
 	display: inline-block;
-	margin: 1rem 0 0.5rem 0;
+	margin: 1rem 0;
+	transform: rotate(-5deg);
 }
 h4 {
-	margin-bottom: 0;
-	margin-top: 1em;
+	margin: 1rem 0;
+	transform: rotate(-5deg);
 }
 @media (max-width: 700px) {
-	h1 {
+	/* h1 {
 		font-size: 42px;
-	}
+	} */
 	h2 {
 		font-size: 30px;
 	}
@@ -92,6 +94,11 @@ ul {
 	padding-left: 22px;
 	margin: 0;
 	list-style: square;
+}
+@media (max-width: 700px) {
+	.big-art {
+		overflow-x: scroll;
+	}
 }
 .wider {
 	max-width: 1440px;
@@ -108,9 +115,10 @@ ul {
 	margin-top: 0;
 }
 .intro.projects h2 {
-	font-size: 85px;
+	font-size: 14vw;
 	margin-top: 20px;	
 	margin-bottom: 0;
+	line-height: 1;
 }
 @media (max-width: 700px)  {
 	.intro {
@@ -118,9 +126,6 @@ ul {
 	}
 	.intro.projects h1 {
 		font-size: 20px;
-	}
-	.intro.projects h2 {
-		font-size: 42px;	
 	}
 }
 section:last-child, footer {
@@ -133,7 +138,12 @@ footer {
 
 svg {
 	fill: #FFFBF4;
-	transition: all 0.25s ease-in;
+	width: 100%;
+}
+@media (max-width: 700px) {
+	svg {
+		min-width: 1400px;
+	}
 }
 svg .e, svg .d {
 	stroke: #FFFBF4;
@@ -163,32 +173,19 @@ i.fab {
 .lg-text {
 	font-size: 30px;
 }
-/* .rainbow {
-	background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	animation: rainbow_animation 10s ease-out infinite alternate;
-	background-size: 400% 100%;
-} */
-/* .rainbow {
-  color: #FF0000;
-  animation: rainbow 6s ease-out infinite alternate;
-  width: 200px;
-  height: 100px;
-} */
+@media (max-width: 700px) {
+	.lg-text {
+		font-size: 20px;
+	}
+}
 .rainbow.border {
 	animation: rainbowBorder 6s ease-out infinite alternate;
 }
 .rainbow {
-  background-image: repeating-linear-gradient(to left, #FF1493, #9932CC, #0000FF, #00FFFF, #7FFF00, #FFFF00, #FFA500, #FF0000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 400% 100%;
-  animation: rainbow 6s ease-out infinite alternate;
-  display: inline-block;
+  color: #FF0000;
+  animation: rainbow 6s linear infinite alternate;
 }
-/* @keyframes rainbow {
+@keyframes rainbow {
   12.5% {
 	color: #FF0000;
   }
@@ -205,7 +202,7 @@ i.fab {
 	color: #00FFFF;
   }
   75% {
-	color: #0000FF;
+	color: #3232FF;
   }
   87.5% {
 	color: #9932CC;
@@ -213,34 +210,70 @@ i.fab {
   100% {
 	color: #FF1493;
   }
-} */
-@keyframes rainbowBorder {
+}
+@keyframes rainbowFill {
   12.5% {
-	border-color: #FF0000;
+	fill: #FF0000;
   }
   25% {
-	border-color: #FFA500;
+	fill: #FFA500;
   }
   37.5% {
-	border-color: #FFFF00;
+	fill: #FFFF00;
   }
   50% {
-	border-color: #7FFF00;
+	fill: #7FFF00;
   }
   62.5% {
-	border-color: #00FFFF;
+	fill: #00FFFF;
   }
   75% {
-	border-color: #0000FF;
+	fill: #3232FF;
   }
   87.5% {
-	border-color: #9932CC;
+	fill: #9932CC;
   }
   100% {
-	border-color: #FF1493;
+	fill: #FF1493;
   }
 }
-@keyframes rainbow {
-	0%{background-position: 0 0;}
-	100%{background-position: 100% 0;}
+@keyframes rainbowStroke {
+  12.5% {
+	stroke: #FF0000;
+  }
+  25% {
+	stroke: #FFA500;
+  }
+  37.5% {
+	stroke: #FFFF00;
+  }
+  50% {
+	stroke: #7FFF00;
+  }
+  62.5% {
+	stroke: #00FFFF;
+  }
+  75% {
+	stroke: #3232FF;
+  }
+  87.5% {
+	stroke: #9932CC;
+  }
+  100% {
+	stroke: #FF1493;
+  }
+}
+.thanks {
+	transform: rotate(-5deg);
+	display: inline-block;
+	font-weight: 600;
+	font-size: 30px;
+}
+.lg-hide {
+	display: none;
+}
+@media (max-width: 700px) {
+	.lg-hide {
+		display: block;
+	}
 }
