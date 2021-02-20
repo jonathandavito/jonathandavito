@@ -336,7 +336,7 @@ i.fab {
 	font-weight: 600;
 }
 .top-border {
-	border-top: 1px solid #FFFBF4;
+	border-top: 3px solid #FFFBF4;
 }
 .space-around {
 	display: flex;
