@@ -17,6 +17,12 @@ img	{
 img.gif {
 	max-width: 420px;
 }
+img.auto {
+	width: auto;
+}
+img.small {
+	max-width: 666px;
+}
 @media (max-width: 700px) {
 	img.gif {
 		margin: 0 auto;
@@ -180,10 +186,17 @@ i.fab {
 	font-size: 14px;
 	letter-spacing: 0.5px;
 }
+.aside-text {
+	max-width: 300px;
+	width: 100%;
+}
 .lg-text {
 	font-size: 30px;
 }
 @media (max-width: 700px) {
+	.aside-text {
+		max-width: 100%;
+	}
 	.lg-text {
 		font-size: 20px;
 	}
@@ -341,10 +354,12 @@ i.fab {
 .space-around {
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
 .space-between {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .space-between div {
 	margin: 0 auto;
