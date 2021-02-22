@@ -358,6 +358,22 @@ i.fab {
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
+.left-right div {
+	margin-left: 0;
+	margin-right: auto;
+}
+.left-right div:last-child {
+	margin-left: auto;
+	margin-right: 0;
+} 
+.right-left div {
+	margin-right: 0;
+	margin-left: auto;
+}
+.right-left div:last-child {
+	margin-right: auto;
+	margin-left: 0;
+}
 .space-between {
 	display: flex;
 	justify-content: space-between;
