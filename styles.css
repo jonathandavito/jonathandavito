@@ -29,6 +29,9 @@ img.small {
 		text-align: auto;
 		display: block;
 	}
+	img.auto {
+		width: 100%;
+	}
 }
 header, nav, main.home, section, footer {
 	padding: 1.618rem 0;
@@ -384,7 +387,6 @@ i.fab {
 }
 @media (max-width: 700px) {
 	.space-around, .space-between {
-		flex-direction: column;
 		justify-content: center;
 	}
 	.space-between div {
