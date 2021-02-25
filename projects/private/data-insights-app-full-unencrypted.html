@@ -6,7 +6,7 @@
 	<title>Data insights app rebuild</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"> 
-	<link rel="stylesheet" href="../styles.css">
+	<link rel="stylesheet" href="../../styles.css">
 	<script src="https://kit.fontawesome.com/4a522ab2fe.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -19,20 +19,40 @@
 		<section class="animation-element slide-right">
 			<p>Acquiring a startup and their tech into 2020 is already a bold move. Rebuilding it from scratch in less than a year is bolder. The original tool had great value to it‘s customers but was borderline unusable to anyone who didn‘t already live and breath <a href="https://en.wikipedia.org/wiki/Energy_demand_management">energy demand management</a>. Being built with a third-party front-end that seemed boundless in its capabilities resulted in two things –– high-cost customer training and endless feature requests with the ability to add new data points at will. The perceived value lead to something that became harder to maintain and the third-party front-end membership alone added a massive annual cost.</p>
 		</section>
-		<section class="animation-element slide-up wide">
+		<section class="animation-element slide-up wide" id="bookmark">
 			<div class="space-between">
 				<div class="viewport">
-					<img src="../img/redacted-dashboard.jpg" alt="">
+					<img src="../../img/02.png" alt="">
 				</div>
-				<div class="aside-text"><p class="sm-text">I have to redact 90% of this but you get the gist. Accessible sidebar controls to filter through lots of tabular data with charts and maps. Simple yet powerful. We even added an accessibility menu to update font sizes, invert colors, remove animations, and more.</p></div>
+				<div class="aside-text"><p class="sm-text">Voila! The finished product consisted of accessible sidebar controls that were collapsible for a more focused experience when looking at large sets of data. The original tool had lots of visuals that made it slow (30sec - 1min load times between pages) and often created confusion and doubt when analysis datasets. While I don't have any screenshots of the decommissioned tool –– <a href="https://www.yellowfinbi.com">Yellowfin</a> –– was the third party software is was built on.</p></div>
+			</div>
+			<div class="space-between vertical-space">
+				<div class="aside-text"><p class="sm-text">Users expressed that visuals with in the previous tool “added no value”. So we put them on a second tab that they could interact with and export if they needed a map, bar graph, or other data visualization for presentations or other offline needs.</p></div>
+				<div class="viewport">
+					<img src="../../img/01.png" alt="">
+				</div>
+			</div>
+			<div class="space-between vertical-space">
+				<div class="viewport">
+					<img src="../../img/03.png" alt="">
+				</div>
+				<div class="aside-text"><p class="sm-text">We made use of a modal design to expand on details of particular data points. The product in its entirety consisted of 8 dashboards worth of data portals. It essentially allowed utilities and solution providers (who pitch to utilities) to see across the US and Canada how their programs stack against each other with a great level of detail and granularity.</p></div>
+			</div>
+			<div class="space-between vertical-space">
+				<div class="aside-text"><p class="sm-text">The tool had <em>a lot</em> of acronyms and highly industry-specific terms. Users expressed it would be nice to have an accessible place to view them instead of a clunky PDF. Ask and you shall receive.</p></div>
+				<div class="viewport">
+					<img src="../../img/04.png" alt="">
+				</div>
+			</div>
+			<div class="space-between vertical-space">
+				<div class="viewport">
+					<img src="../../img/05.png" alt="">
+				</div>
+				<div class="aside-text"><p class="sm-text">The accessibility menu was an experimental feature so we only shipped with a <em>very</em> limited number of options that we knew would be useful to users like controlling table font-size and accessible color-palettes for data visualizations. We had plans on the roadmap to expand on it in post-launch maintenance sprints and make it standard across all of our products.</p></div>
 			</div>
 		</section>
-		
 		<section class="animation-element slide-left">
-			<p class="lg-text">If you want to see the <a href="../projects/private/data-insights-app-full.html#bookmark" class="rainbow">full case study</a>, please send me an <a href="mailto:jonathan.davito@protonmail.com" class="rainbow">email</a> for the password to get full access.</p>
-		</section>
-		<section class="animation-element slide-right">
-			<p>Acquiring a startup and their tech into 2020 is already a bold move. Rebuilding it from scratch in less than a year is bolder. The original tool had great value to it‘s customers but was borderline unusable to anyone who didn‘t already live and breath <a href="https://en.wikipedia.org/wiki/Energy_demand_management">energy demand management</a>. Being built with a third-party front-end that seemed boundless in its capabilities resulted in two things –– high-cost customer training and endless feature requests with the ability to add new data points at will. The perceived value lead to something that became harder to maintain and the third-party front-end membership alone added a massive annual cost.</p>
+			<p>We spent about 2 months gathering requirements, learning about the tool, and documenting its intricacies. We asked ourselves how we might make the tool more performant and friendly to new customers while providing the same value, depth, and power of its predecessor. Initially slated for a tentative year long timeline for the project, our timeline get’s cut almost in half, and then the pandemic happens.</p>
 		</section>
 		<section class="animation-element slide-up">
 			<div class="space-around">
@@ -46,17 +66,26 @@
 			<p>We held weekly meetings with our stakeholders to keep everyone involved accountable and on-pace. It was a balancing act of breaking down our past and present assumptions of the tool with <span class="rainbow">several rounds of user interviews</span> and relying on our stakeholders’ deep domain knowledge as a guide. We would design a feature take it to stakeholders for approval and test it with users to iterate effectively. The Adobe XD file I ended up with was one of the largest I've worked on –– <span class="rainbow">behold</span>.</p>
 		</section>
 		<section class="animation-element slide-up wider">
-			<img src="../img/data-insights-app-wireframes.jpg" alt="A gigantic Adobe XD file of several dashboard designs, features, and small apps for this project.">
-	    </section>
+			<img src="../../img/data-insights-app-wireframes.jpg" alt="A gigantic Adobe XD file of several dashboard designs, features, and small apps for this project.">
+		</section>
 		<section class="animation-element slide-left">
 			<p>Our wireframes were kept low-fidelity for clarity and focused on rapidly testing to iterate quickly. Building the front-end for the application was incredibly simple utilizing R Shiny (and having a <a href="https://github.com/leonawicz" target="_blank">kick-ass R developer on our team</a>) that allowed us to extend the front-end with very little custom code. With the company’s brand refresh in tow –– <a href="../projects/marketing-design.html">more on that later</a> –– I had the opportunity to create some little logos for each dashboard of the product to make the rebuild more impactful.</p>
 		</section>
 		<section class="animation-element slide-up wider">
-			<img src="../img/es-icons.svg" alt="A gigantic Adobe XD file of several dashboard designs, features, and small apps for this project.">
+			<img src="../../img/es-icons.svg" alt="A gigantic Adobe XD file of several dashboard designs, features, and small apps for this project.">
 		</section>
 		<section class="animation-element slide-right">
 			<p>Being granted to budget to user test at different stages throughout the rebuild allowed us to make meaningful enhancements. We were able to identify successful design patterns to reuse and technical bugs to address. The interview process was structured around a <span class="rainbow">diverse groups of participants with different experience levels</span> with the previous tool. The data collected was synthesized into feature updates and bug lists.</p>
 		</section>
+		<div class="space-between vertical-space">
+			<div class="viewport mobile">
+				<img src="../../img/08.png" alt="">
+			</div>
+			<div class="aside-text"><p class="sm-text">We even made the tool responsive even though it is exclusively desktop software. A tad cramped, but it was usable and added flexibility to the product‘s overall functionality.</p></div>
+			<div class="viewport mobile">
+				<img src="../../img/09.png" alt="">
+			</div>
+		</div>
 		<section class="animation-element slide-left">
 			<p>The launch was a success with minimal hiccups, customers loved it, everyone was happy. And our customer training time and maintenance costs reduced to almost nothing. 🎉🥳🎉</p>
 		</section>
@@ -77,7 +106,7 @@
 	</footer>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="../js/main.js"></script>
+	<script src="../../js/main.js"></script>
 	
 </body>
 </html>

@@ -289,30 +289,30 @@ i.fab {
 	fill: #FF1493;
   }
 }
-@keyframes rainbowStroke {
+@keyframes rainbowOutline {
   12.5% {
-	stroke: #FF0000;
+	outline-color: #FF0000;
   }
   25% {
-	stroke: #FFA500;
+	outline-color: #FFA500;
   }
   37.5% {
-	stroke: #FFFF00;
+	outline-color: #FFFF00;
   }
   50% {
-	stroke: #7FFF00;
+	outline-color: #7FFF00;
   }
   62.5% {
-	stroke: #00FFFF;
+	outline-color: #00FFFF;
   }
   75% {
-	stroke: #3232FF;
+	outline-color: #3232FF;
   }
   87.5% {
-	stroke: #9932CC;
+	outline-color: #9932CC;
   }
   100% {
-	stroke: #FF1493;
+	outline-color: #FF1493;
   }
 }
 .thanks {
@@ -337,6 +337,8 @@ i.fab {
 	max-width: 220px;
 	border-radius: 20px;
 	box-shadow: 0px 2px 34px 1px rgba(225,220,220, 0.25);
+	overflow-y: scroll;
+	max-height: 350px;
 }
 .viewport.rainbow {
 	display: inline-block;
@@ -399,7 +401,9 @@ i.fab {
 		display: block;
 	}
 }
-
+.vertical-space {
+	margin: 2rem 0;
+}
 .slide-right {
 	opacity: 0;
 	transition: transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
@@ -429,4 +433,98 @@ i.fab {
 	opacity: 1;
 	transition: transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 	transform: translate3d(0px, 0px, 0px);
+}
+
+#dialogText {
+	padding: 2em;
+	color: #FFFBF4;
+	background-color:  #0C1009;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+#dialogWrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: table;
+	color: #FFFBF4;
+	background-color:  #0C1009;
+}
+
+#dialogWrapCell {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#mainDialog {
+	max-width: 420px;
+	margin: 0;
+	border-radius: 0;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:  #0C1009;
+	overflow: hidden;
+	text-align: left;
+}
+#passArea {
+	padding: 20px 30px;
+	background-color:  #0C1009;
+}
+#passArea > * {
+	margin: 5px auto;
+}
+#pass {
+	width: 100%;
+	height: 40px;
+	font-size: 30px;
+	color: #FFFBF4;
+	background-color: black;
+}
+#pass:focus {
+	outline-style: inset;
+	animation: rainbowOutline 6s ease-out infinite alternate;
+}
+
+#messageWrapper {
+	float: left;
+	vertical-align: middle;
+	line-height: 30px;
+}
+
+.notifyText {
+	display: none;
+	font-size: 0.5rem;
+}
+
+#invalidPass {
+	color: #FF0000;
+}
+
+#success {
+	color: #7FFF00;
+}
+
+#submitPass {
+	font-size: 18px;
+	border-radius: 0;
+	animation: rainbowBG 6s ease-out infinite alternate;
+	color: #FFFBF4;
+	border: 0;
+	outline: 0;
+	font-weight: 600;
+	margin: 0;
+	padding: 12px 16px;
+	float: right;
+	margin-right: -6px;
+}
+#contentFrame {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
