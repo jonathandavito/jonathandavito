@@ -334,11 +334,15 @@ i.fab {
 }
 .viewport.mobile {
 	padding: 2em 0.5em;
-	max-width: 220px;
 	border-radius: 20px;
 	box-shadow: 0px 2px 34px 1px rgba(225,220,220, 0.25);
+}
+.viewport.mobile .inner {
 	overflow-y: scroll;
+	height: 100%;
+	widht: 100%;
 	max-height: 350px;
+	max-width: 220px;
 }
 .viewport.rainbow {
 	display: inline-block;
@@ -512,7 +516,7 @@ i.fab {
 	font-size: 18px;
 	border-radius: 0;
 	animation: rainbowBG 6s ease-out infinite alternate;
-	color: #FFFBF4;
+	color: #0C1009;
 	border: 0;
 	outline: 0;
 	font-weight: 600;
