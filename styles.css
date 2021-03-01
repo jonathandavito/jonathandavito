@@ -475,8 +475,13 @@ i.fab {
 	text-align: left;
 }
 #passArea {
-	padding: 20px 10px;
+	padding: 20px 30px;
 	background-color:  #0C1009;
+}
+@media (max-width: 700px) {
+	#passArea {
+		padding: 20px 5px;
+	}
 }
 #passArea > * {
 	margin: 5px auto;
