@@ -466,21 +466,21 @@ i.fab {
 
 #mainDialog {
 	max-width: 420px;
+	width: 100%;
 	margin: 0;
 	border-radius: 0;
 	margin-left: auto;
 	margin-right: auto;
 	background-color:  #0C1009;
-	overflow: hidden;
 	text-align: left;
 }
 #passArea {
-	padding: 20px 30px;
 	background-color:  #0C1009;
+	width: 100%;
 }
 @media (max-width: 700px) {
-	#passArea {
-		padding: 20px 5px;
+	#mainDialog {
+		max-width: 320px;
 	}
 }
 #passArea > * {
@@ -492,9 +492,14 @@ i.fab {
 	font-size: 30px;
 	color: #FFFBF4;
 	background-color: black;
+	-webkit-appearance: none;
+	padding: 0;
+	border: 0;
 }
+
 #pass:focus {
-	outline-style: inset;
+	outline-style: solid;
+	outline-width: 2px;
 	animation: rainbowOutline 6s ease-out infinite alternate;
 }
 
@@ -528,7 +533,6 @@ i.fab {
 	margin: 0;
 	padding: 12px 16px;
 	float: right;
-	margin-right: -6px;
 }
 #contentFrame {
 	position: absolute;
