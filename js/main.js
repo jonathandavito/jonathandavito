@@ -1,25 +1,20 @@
-// Check-if-in-view Script
-//var $animation_elements = $('.animation-element');
-//var $window = $(window);
-//
-//function check_if_in_view() {
-//  var window_height = $window.height();
-//  var window_top_position = $window.scrollTop();
-//  var window_bottom_position = (window_top_position + window_height);
-//
-//  $.each($animation_elements, function() {
-//	var $element = $(this);
-//	var element_height = $element.outerHeight();
-//	var element_top_position = $element.offset().top;
-//	var element_bottom_position = (element_top_position + element_height);
-//
-//	//check to see if this current container is within viewport
-//	if ((element_bottom_position >= window_top_position) &&
-//	  (element_top_position <= window_bottom_position)) {
-//	  $element.addClass('in-view');
-//	} 
-//  });
-//}
-//
-//$window.on('scroll resize', check_if_in_view);
-//$window.trigger('scroll');
+// Years of experience
+function expYears(){
+    const currentYear = new Date().getFullYear();
+    const startYear = 2014;
+    const YOE = currentYear - startYear;
+
+    document.getElementById("YOE").textContent = YOE;
+}
+
+function thanksFonts(){
+    var fontType = ["Emeritus", "Taklobo", "Tangley", "Swirl"];
+    var num = Math.floor(Math.random()*4);
+    
+    document.getElementById("thanks").style.fontFamily = fontType[num];
+}
+
+window.addEventListener("load", myInit, true); function myInit(){  
+    //expYears(); 
+    thanksFonts();
+};
