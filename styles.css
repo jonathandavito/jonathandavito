@@ -59,6 +59,7 @@ img.small {
 }
 footer,
 header,
+main,
 main.home,
 nav,
 section {
@@ -96,7 +97,7 @@ main.home h2 {
   width: 100%;
 }
 main.home a {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   font-family: Slussen Mono, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
 /* @media (max-width: 700px) {
